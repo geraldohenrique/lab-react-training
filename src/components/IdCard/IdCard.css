@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.idCard{
+    display: flex;
+    height: 136px;
+    line-height: normal;
+    text-align: left;
+    margin-bottom: 3px;
+}
+
+.imgIdCard{
+    padding: 4px;
+}
+
+.tituloCard{
+    font-weight: bold;
+}

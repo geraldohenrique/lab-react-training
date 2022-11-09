@@ -1,0 +1,51 @@
+.driver-card-div{
+    display: flex;
+    justify-content: center;
+    background-color: #425cbb;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    height: 150px;
+}
+
+.driver-card{
+    display: flex;
+    width: 325px;
+    justify-content: left;
+   
+}
+
+.div-img-driver{
+    display: flex;
+    align-items: center;
+}
+
+.img-driver{
+    height: 6rem;
+    width: 6rem;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.dados-card-driver{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+
+
+}
+
+.dados-driver{
+    text-align: left;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;    
+}
+.div-rating{
+    font-weight: normal;
+}
+.model-plate{
+    font-size: 16px;
+    font-weight: normal;
+
+}

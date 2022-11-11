@@ -1,7 +1,7 @@
 import './DriverCard.css'
 import Rating from '../Rating/Rating'
 
-function DriveCard(props){
+function DriverCard(props){
     return(
         <div className='driver-card-div'>
             <div className='driver-card'>
@@ -18,4 +18,4 @@ function DriveCard(props){
     )
 }
 
-export default DriveCard
+export default DriverCard

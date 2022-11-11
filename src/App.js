@@ -6,8 +6,29 @@ import BoxColor from './components/BoxColor/BoxColor';
 import CreditCard from './components/CreditCard/CreditCard';
 import Rating from './components/Rating/Rating';
 import DriverCard from './components/DriverCard/DriverCard';
+import LikeButton from './components/LikeButton/LikeButton';
+import { useState } from 'react';
+import ClickablePicture from './components/ClickablePicture/ClickablePicture';
 
-function App() {
+
+function App(){
+
+  const [countLike, setCountLike] = useState([0,0])
+  const [newStyle, setNewStyle] = useState(['purple', 'purple'])
+  const color = ['purple','blue','green','yellow','orange','red']
+
+  
+  const addLike = (key) => {
+    let indexColor = Math.floor(Math.random() * 5) 
+    const copyCountLike = [...countLike]
+    const copyNewStyle= [...newStyle]
+    copyCountLike[key]++
+    copyNewStyle[key] = color[indexColor]
+    setCountLike(copyCountLike)
+    setNewStyle(copyNewStyle)
+  }
+
+
   return (
     <div className='headsApp'>
       <h1 className='titleComps'>IdCard</h1>
@@ -56,7 +77,6 @@ function App() {
           bgColor="#11aa99"
           color="white" 
         />
-            
         <CreditCard
           type="Master Card"
           number="0123456789010995"
@@ -67,7 +87,6 @@ function App() {
           bgColor="#eeeeee"
           color="#222222"
         />
-            
         <CreditCard
           type="Visa"
           number="0123456789016984"
@@ -99,7 +118,6 @@ function App() {
             licensePlate: "CO42DE"
           }}
         />
-
         <DriverCard
           name="Dara Khosrowshahi"
           rating={4.9}
@@ -110,7 +128,14 @@ function App() {
           }}
         />
       </div>
-
+      <h1 className='titleComps'>Like Button</h1>
+      <div className="App">
+        <LikeButton addLike={addLike} countLike={countLike} newStyle={newStyle}/>
+      </div>
+      <h1 className='titleComps'>Clickable Picture</h1>
+      <div className="App clickable-pic">
+        <ClickablePicture />
+      </div>
     </div>
   );
 }
